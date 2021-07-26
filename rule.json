@@ -1,0 +1,39 @@
+[
+{
+  "id": "zhongziso24",
+  "name": "磁力搜索",
+  "url": "https://zhongziso24.xyz",
+  "icon": "https://zhongziso24.xyz/favicon.ico",
+  "paths": {
+    "preset": "/list/{k}/{p}",
+    "size": "/list_length/{k}/{p}"
+  },
+  "xpath": {
+    "group": "//div[@class='panel-body table-responsive table-condensed']",
+    "magnet": "./table[15]/tbody[1]/tr[2]/td[4]/a[1]/@href",
+    "name": "./table[2]/tbody[1]/tr[2]/td[4]/a[1]",
+    "size": "./table[15]/tbody[1]/tr[2]/td[2]/strong[1]",
+    "date": "./table[15]/tbody[1]/tr[2]/td[1]/strong[1]",
+    "hot": "./table[15]/tbody[1]/tr[2]/td[3]/strong[1]"
+  }
+}
+{
+  "id": "sbt510",
+  "name": " 种子搜索",
+  "url": "http://sbt510.xyz",
+  "icon": "http://sbt510.xyz/favicon.ico",
+  "paths": {
+    "preset": "/search?word={k}",
+    "size": "/search?word={k}&sort=length",
+    "time": "/search?word={k}&sort=time"
+  },
+  "xpath": {
+    "group": "//body",
+    "magnet": "./div[3]/div[1]/ul[1]/li[3]/div[1]/a[1]/@href",
+    "name": "./div[3]/div[1]/ul[1]/li[3]/div[1]/a[1]",
+    "size": "./remove-web-limits-iqxin[1]/style[1]",
+    "date": "./script[8]",
+    "hot": "./div[4]/div[1]/div[1]/div[1]/p[2]/b[2]"
+  }
+}
+]
