@@ -1,0 +1,102 @@
+"exportedMediaSourceDataList":{
+    {
+    "mediaSources": [
+        {
+            "factoryId": "web-selector",
+            "version": 2,
+            "arguments": {
+                "name": "hanime1",
+                "description": "",
+                "iconUrl": "https://vdownload.hembed.com/image/icon/nav_logo.png?secure=HxkFdqiVxMMXXjau9riwGg==,4855471889",
+                "searchConfig": {
+                    "searchUrl": "https://hanime1.me/search?query={keyword}",
+                    "searchUseOnlyFirstWord": true,
+                    "searchRemoveSpecial": true,
+                    "searchUseSubjectNamesCount": 1,
+                    "rawBaseUrl": "https://hanime1.me/",
+                    "requestInterval": 3000,
+                    "subjectFormatId": "indexed",
+                    "selectorSubjectFormatA": {
+                        "selectLists": "div.video-info-header > a",
+                        "preferShorterName": true
+                    },
+                    "selectorSubjectFormatIndexed": {
+                        "selectNames": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-6> div > div:nth-child(2) > div > div.card-mobile-title",
+                        "selectLinks": "#home-rows-wrapper > div.content-padding-new > div > div.col-xs-6 > a",
+                        "preferShorterName": true
+                    },
+                    "selectorSubjectFormatJsonPathIndexed": {
+                        "selectLinks": "$[*]['url', 'link']",
+                        "selectNames": "$[*]['title','name']",
+                        "preferShorterName": true
+                    },
+                    "channelFormatId": "no-channel",
+                    "selectorChannelFormatFlattened": {
+                        "selectChannelNames": ".anthology-tab > .swiper-wrapper a",
+                        "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+                        "selectEpisodeLists": ".anthology-list-box",
+                        "selectEpisodesFromList": "a",
+                        "selectEpisodeLinksFromList": "",
+                        "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
+                    },
+                    "selectorChannelFormatNoChannel": {
+                        "selectEpisodes": "#playlist-scroll > div.related-watch-wrap> div > div:nth-child(2) > div.card-mobile-title",
+                        "selectEpisodeLinks": "#playlist-scroll >div.related-watch-wrap> a",
+                        "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
+                    },
+                    "defaultResolution": "720P",
+                    "defaultSubtitleLanguage": "CHS",
+                    "onlySupportsPlayers": [],
+                    "filterByEpisodeSort": false,
+                    "filterBySubjectName": true,
+                    "selectMedia": {
+                        "distinguishSubjectName": true,
+                        "distinguishChannelName": true
+                    },
+                    "matchVideo": {
+                        "enableNestedUrl": false,
+                        "matchNestedUrl": "^.+(m3u8|mp4|vip|xigua\\.php).+\\?",
+                        "matchVideoUrl": "^https?:\\/\\/(?:[^\\/]+)\\/\\d+-(?:1080p|720p)\\.mp4(\\?.*)?$",
+                        "cookies": "",
+                        "addHeadersToVideo": {
+                            "referer": "",
+                            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+                        }
+                    }
+                },
+                "tier": 2
+            }
+        },
+        {
+            "factoryId": "rss",
+            "version": 1,
+            "arguments": {
+                "name": "动漫花园",
+                "description": "",
+                "iconUrl": "https://anime.fanacg.com/images/sitelogo.gif",
+                "searchConfig": {
+                    "searchUrl": "https://anime.fanacg.com/topics/rss/page/{page}/rss.xml?keyword={keyword}&sort_id=0&team_id=0&order=date-desc",
+                    "filterByEpisodeSort": true,
+                    "filterBySubjectName": true
+                },
+                "tier": 2
+            }
+        },
+        {
+            "factoryId": "rss",
+            "version": 1,
+            "arguments": {
+                "name": "密柑计划",
+                "description": "",
+                "iconUrl": "https://mikanani.kas.pub/images/mikan-pic.png",
+                "searchConfig": {
+                    "searchUrl": "https://mikanani.kas.pub/RSS/Search?searchstr={keyword}",
+                    "filterByEpisodeSort": true,
+                    "filterBySubjectName": true
+                },
+                "tier": 2
+            }
+        }
+    ]
+    }
+}
